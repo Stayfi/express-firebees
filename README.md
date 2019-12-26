@@ -1,6 +1,6 @@
 # Express FireBees 🐝
 
-version: 'v0.1.0'
+version: 'v0.1.2'
 
 [![Build Status](https://travis-ci.org/Stayfi/express-firebees.svg?branch=master)](https://travis-ci.org/Stayfi/express-firebees)
 [![Coverage Status](https://coveralls.io/repos/github/Stayfi/express-firebees/badge.svg?branch=develop)](https://coveralls.io/github/Stayfi/express-firebees?branch=develop)

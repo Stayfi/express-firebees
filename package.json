@@ -1,6 +1,6 @@
 {
   "name": "express-firebees",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Express Firebees 🐝: Http functions for express framework, like Firebase Cloud Functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
