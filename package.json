@@ -1,0 +1,52 @@
+{
+  "name": "express-firebees",
+  "version": "0.1.1",
+  "description": "Express Firebees 🐝: Http functions for express framework, like Firebase Cloud Functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Stayfi/express-firebees.git"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "jscpd": "jscpd . --ignore \"package.json,tsconfig.json,dist,src/views,**/node_modules,**/coverage\"",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "tslint:fix": "npm run tslint -- --fix",
+    "clean": "rm -Rf .nyc_output && rm -Rf coverage && rm -Rf dist && rm -Rf node_modules",
+    "install:dev": "npm i",
+    "install:prod": "npm i --production",
+    "build": "tsc --build tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run tslint"
+  },
+  "author": "Stayfi B. <stayfi@gmail.com>  (https://github.com/Stayfi/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/express": "^4.17.2",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "jscpd": "^2.0.16",
+    "mocha": "^6.2.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-security": "^1.16.0",
+    "tslint-mocha": "^1.0.2",
+    "tslint-plugin-prettier": "^2.1.0",
+    "typescript": "^3.7.4"
+  }
+}
